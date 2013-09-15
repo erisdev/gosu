@@ -1,0 +1,52 @@
+# Blending Modes
+
+Most drawing functions support a `mode` parameter that affects the way new colors are mixed with the colors below them.
+
+For the purpose of blending, the four color channels are treated as normalized values in the range (0..1). If, after mixing, one of the channels is outside this range, it will be clamped.
+
+Gosu supports three blending modes:
+
+<table>
+  <thead>
+    <tr>
+      <th>mode</th>
+      <th>description</th>
+      <th>formula</th>
+      <th>example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><code>:default</code></th>
+      <td>The default blending mode. Does what you expect.</td>
+      <td style="white-space:nowrap">
+        rgb<sub>src</sub> &times; a<sub>src</sub> + rgb<sub>dst</sub> &times; (1 - a<sub>src</sub>)
+      </td>
+      <td><img src="images/mode_default.png" alt="default blending example"></td>
+    </tr>
+    <tr>
+      <th><code>:add</code></th>
+      <td>
+        <p>Adds the RGB color channels together, effectively using the source to <em>lighten</em> the destination.</p>
+        
+        <p>This mode is useful for things like fire, sparks and other effects that need to appear illuminated.</p>
+      </td>
+      <td style="white-space:nowrap">
+        rgb<sub>src</sub> &times; a<sub>src</sub> + rgb<sub>dst</sub>
+      </td>
+      <td><img src="images/mode_add.png" alt="additive blending example"></td>
+    </tr>
+    <tr>
+      <th><code>:multiply</code></th>
+      <td>
+        <p>Multiplies the color channels together, effectively using the source to darken the destination. The alpha channels seem to be ignored, so if your image editor doesn't preserve color information in transparent pixels, they will be treated as black.</p>
+        
+        <p>This mode can be used to simulate shadows, or to create a vignette or spotlight effect.</p>
+      </td>
+      <td style="white-space:nowrap">
+        rgb<sub>src</sub> &times; rgb<sub>dst</sub>
+      </td>
+      <td><img src="images/mode_multiply.png" alt="multiplicative blending example"></td>
+    </tr>
+  </tbody>
+</table>
