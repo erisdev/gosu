@@ -406,6 +406,7 @@ module Gosu
     # 
     # @see #draw_rel
     # @see Gosu::Image.from_text
+    # @see file:reference/Blending_Modes.mdown Blending Modes
     # @see file:reference/Drawing_with_Colors.mdown Drawing with Colors
     # @see file:reference/Z-Ordering.mdown
     def draw(text, x, y, z, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
@@ -423,6 +424,7 @@ module Gosu
     # @param (see #draw)
     # 
     # @see #draw
+    # @see file:reference/Blending_Modes.mdown Blending Modes
     # @see file:reference/Drawing_with_Colors.mdown Drawing with Colors
     # @see file:reference/Z-Ordering.mdown
     def draw_rel(text, x, y, z, rel_x, rel_y, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
@@ -535,6 +537,7 @@ module Gosu
     # 
     # @see #draw_rot
     # @see #draw_as_quad
+    # @see file:reference/Blending_Modes.mdown Blending Modes
     # @see file:reference/Drawing_with_Colors.mdown Drawing with Colors
     # @see file:reference/Z-Ordering.mdown
     def draw(x, y, z, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
@@ -549,6 +552,7 @@ module Gosu
     # @param (see #draw)
     # 
     # @see #draw
+    # @see file:reference/Blending_Modes.mdown Blending Modes
     # @see file:reference/Drawing_with_Colors.mdown Drawing with Colors
     # @see file:reference/Z-Ordering.mdown
     def draw_rot(x, y, z, angle, center_x=0.5, center_y=0.5, factor_x=1, factor_y=1, color=0xffffffff, mode=:default); end
@@ -561,6 +565,7 @@ module Gosu
     # 
     # @see #draw
     # @see Gosu::Window#draw_quad
+    # @see file:reference/Blending_Modes.mdown Blending Modes
     # @see file:reference/Drawing_with_Colors.mdown Drawing with Colors
     # @see file:reference/Order_of_Corners.mdown Order of Corners
     # @see file:reference/Z-Ordering.mdown
@@ -938,6 +943,7 @@ module Gosu
     # 
     # @see #draw_triangle
     # @see #draw_quad
+    # @see file:reference/Blending_Modes.mdown Blending Modes
     # @see file:reference/Drawing_with_Colors.mdown Drawing with Colors
     # @see file:reference/Z-Ordering.mdown
     def draw_line(x1, y1, c1, x2, y2, c2, z=0, mode=:default); end
@@ -960,6 +966,7 @@ module Gosu
     #
     # @see #draw_line
     # @see #draw_quad
+    # @see file:reference/Blending_Modes.mdown Blending Modes
     # @see file:reference/Drawing_with_Colors.mdown Drawing with Colors
     # @see file:reference/Z-Ordering.mdown
     def draw_triangle(x1, y1, c1, x2, y2, c2, x3, y3, c3, z=0, mode=:default); end
@@ -985,6 +992,7 @@ module Gosu
     #
     # @see #draw_line
     # @see #draw_triangle
+    # @see file:reference/Blending_Modes.mdown Blending Modes
     # @see file:reference/Drawing_with_Colors.mdown Drawing with Colors
     # @see file:reference/Order_of_Corners.mdown Order of Corners
     # @see file:reference/Z-Ordering.mdown
