@@ -12,8 +12,8 @@ include Gosu::Zen
 
 window 480, 240, :fullscreen => false
 
-button_down Gosu::KbEscape do
-  close
+button_down :kb_escape do |b|
+  $zen_window.close
 end
 
 update do
@@ -40,11 +40,7 @@ update do
 end
 
 draw do
-  draw_quad\
-    0,     0,      @background,
-    0,     height, @background,
-    width, height, @background,
-    width, 0,      @background, 0
+  draw_rect 0, 0, width, height, color:@background
 
   translate width / 2, height / 2 do
     @colors.each.with_index do |color, i|
@@ -57,10 +53,9 @@ draw do
       translate x, y do
         rotate Gosu.radians_to_degrees(angle) do
           draw_quad\
-            -w, +h, color,
-            -w, -h, color,
-            +w, -h, color,
-            +w, +h, color, 0
+            -w, +h, -w, -h,
+            +w, -h, +w, +h,
+            color:color
         end
       end
     end

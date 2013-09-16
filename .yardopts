@@ -1,1 +1,1 @@
-reference/*.rb - README.txt COPYING reference/*.mdown --asset reference/images:images --markup markdown -M rdiscount --output reference/rdoc
+reference/*.rb lib/gosu/zen.rb lib/gosu/zen/*.rb - README.txt COPYING reference/*.mdown --asset reference/images:images --markup markdown -M rdiscount --no-private --output reference/rdoc
